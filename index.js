@@ -69,8 +69,8 @@ async function getUserProblems(user) {
             }
         }
     } catch (error) {
-        console.log(error);
         console.log(chalk.bgRedBright('ERROR finding problems for specified users'));
+        process.exit(1);
     }
 }
 
@@ -85,6 +85,7 @@ async function readProblemSet() {
         spinner.success({ text: 'Problems are ready' });
     } catch (error) {
         console.log(chalk.bgRedBright('ERROR Fetching the problem set'));
+        process.exit(1);
     }
 }
 
@@ -142,10 +143,10 @@ async function readTags() {
         type: 'checkbox',
         name: 'tags',
         message: 'Choose preferred tags',
-        choices: problemTags,
-        default: problemTags
+        choices: problemTags
     })
     chosenTags = answers.tags;
+    if (chosenTags.length == 0) chosenTags = problemTags;
 }
 
 async function readNumberOfProblems() {
