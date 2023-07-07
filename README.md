@@ -31,3 +31,5 @@ Make sure to have the latest version of NodeJs on your system. Can be found here
 - Navigate to the root directory of the repo and open your terminal/CMD
 - Run `npm install` only the first time to fetch all needed dependencies
 - Next whenever you want ot use it run `npm start` and voila!
+
+For global installation, you can run `npm install -g`. When you want to use the tool from anywhere, just open the terminal and run `katy`
