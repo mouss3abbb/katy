@@ -2,7 +2,7 @@
   "name": "katy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "bin/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,6 +14,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bin": {
+    "katy": "./bin/index.js"
+  },
   "dependencies": {
     "axios": "^1.4.0",
     "chalk": "^5.2.0",
